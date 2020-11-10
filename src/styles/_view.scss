@@ -1,0 +1,68 @@
+.view {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  > .wrapper {
+    flex-grow: 1;
+    overflow: auto;
+    align-self: center;
+    width: 100%;
+
+    .scrollColumn {
+      display: flex;
+      justify-content: space-between;
+      overflow: auto;
+    }
+
+    .column {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .contentPadding {
+      &::before {
+        content: "";
+        min-width: 20px;
+      }
+      &::after {
+        content: "";
+        min-width: 20px;
+      }
+    }
+  }
+
+  .planet {
+    position: absolute;
+    z-index: -1;
+    background-image: url("https://img2.pngio.com/50-premium-vector-icons-of-space-designed-by-freepik-in-2020-mars-vector-png-512_512.png");
+    height: 300px;
+    width: 300px;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+  }
+
+  > .footer {
+    padding: 40px;
+    background-color: $primary-color;
+    color: $light-text-color;
+  }
+}
+
+.fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9001;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

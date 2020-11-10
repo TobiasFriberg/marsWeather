@@ -1,0 +1,25 @@
+.text {
+  &-headline {
+    font-weight: 600;
+    font-size: 22px;
+    padding-bottom: 5px;
+  }
+
+  &-large {
+    font-size: 18px;
+  }
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 32px;
+  padding-bottom: 5px;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+.centered {
+  text-align: center;
+}
