@@ -8,7 +8,8 @@ configure({adapter: new Adapter()});
   First_UTC: '2020-11-06T05:45:18Z',
   AT: {
     mx: -10,
-    mn: -5
+    mn: -5,
+    av: -7
   },
   HWS: {
     av: 20
@@ -33,7 +34,7 @@ test('display correct temperature first', () => {
 test('display correct wind second', () => {
   const component = shallow(<WeatherCard sol="123" solData={solData} />);
   const test = component.find('li').at(1).text();
-  expect(test).toContain('20 m/s');
+  expect(test).toContain('20 m / s');
 });
 
 test('display date in correct format', () => {
@@ -48,7 +49,8 @@ test('display wind when missing', () => {
   First_UTC: '2020-11-06T05:45:18Z',
   AT: {
     mx: -10,
-    mn: -5
+    mn: -5,
+    av: -7
   },
   PRE: {
     av: 25,
@@ -57,5 +59,5 @@ test('display wind when missing', () => {
 
   const component = shallow(<WeatherCard sol="123" solData={solDataAlt} />);
   const test = component.find('li').at(1).text();
-  expect(test).toContain('N/A m/s');
+  expect(test).toContain('No wind data');
 });
