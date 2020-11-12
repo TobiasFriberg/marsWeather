@@ -86,7 +86,7 @@ const WeatherCard: React.FC<WeatherProps> = (props) => {
           <i className="fas fa-wind" /> {printWind()}
         </li>
         <li>
-          <i className="fas fa-stopwatch" /> {printPressure()} Pa
+          <i className="fas fa-stopwatch" /> {printPressure()}
         </li>
       </List>
     </Card>
